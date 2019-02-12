@@ -1,4 +1,3 @@
-install:
-  - gcc *.cc -o main
-script:
-  - ./main
+language: generic
+install: gcc -std=c++17 *.cc -o main
+script: ./main
