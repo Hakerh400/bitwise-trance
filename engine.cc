@@ -1,6 +1,6 @@
 #include "engine.h"
 
-#define MAX_ADDR_SIZE 62
+#define MAX_ADDR_SIZE 32
 
 Engine::Engine(Buffer *src, Buffer *input){
   mem = new BitBuffer(src);
