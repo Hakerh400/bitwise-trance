@@ -1,1 +1,1 @@
-bitwise-trance
+String-rewriting esoteric programming language.
