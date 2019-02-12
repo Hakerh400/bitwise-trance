@@ -31,7 +31,7 @@ namespace Main{
     delete eng;
 
     if(!output)
-      return err("Memory allocation failed");
+      return err("Out of memory");
     
     FS::writeFile(outputFile, output);
     delete output;
