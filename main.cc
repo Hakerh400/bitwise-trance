@@ -44,6 +44,6 @@ namespace Main{
   }
 }
 
-int main(u8 argc, const char **argv){
+int main(int argc, const char **argv){
   return Main::main(argc, argv);
 }

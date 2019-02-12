@@ -17,7 +17,7 @@ public:
 
   bit get(u8 index);
   void set(u8 index, bit val);
-  void xor(u8 index);
+  void flip(u8 index);
 
   Buffer *getBuf()const;
   u8 getLen()const;

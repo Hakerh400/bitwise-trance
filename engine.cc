@@ -57,7 +57,7 @@ Buffer *Engine::run(){
         break;
 
       case 0b01: // xor
-        mem->xor(addr);
+        mem->flip(addr);
         break;
 
       case 0b10: // in

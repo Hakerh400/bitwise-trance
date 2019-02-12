@@ -20,4 +20,4 @@ namespace Main{
   int err(const char *msg);
 }
 
-int main(u8 argc, const char **argv);
+int main(int argc, const char **argv);

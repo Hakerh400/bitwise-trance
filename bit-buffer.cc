@@ -61,7 +61,7 @@ void BitBuffer::set(u8 index, bit val){
   else data[byteIndex] &= ~mask;
 }
 
-void BitBuffer::xor(u8 index){
+void BitBuffer::flip(u8 index){
   if(err) return;
   
   u8 byteIndex = index >> 3;
