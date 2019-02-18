@@ -13,7 +13,7 @@ Buffer::~Buffer(){
 }
 
 Buffer *Buffer::allocUnsafe(u8 len){
-  u1 *data = new u1[len];
+  u1 *data = new (std::nothrow) u1[len];
   return new Buffer(data, len);
 }
 

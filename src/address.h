@@ -1,10 +1,6 @@
 #include "main.h"
 #include "array.h"
 
-extern u8 INT_SIZE;
-extern u8 INT_MASK;
-extern u8 HIGHEST_BIT;
-
 class Address{
   Array *arr;
   u8 index = 0;
@@ -13,4 +9,8 @@ class Address{
 public:
   Address(u8 val=0);
   ~Address();
+
+  static u8 intSize();
+  static Address *from(Address *addr);
+  static Address *oldOrNew(Address *addr, bool createNew);
 };

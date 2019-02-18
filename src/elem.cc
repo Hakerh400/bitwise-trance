@@ -7,5 +7,5 @@ Elem::Elem(u8 v, Elem *p, Elem *n){
 }
 
 Elem::~Elem(){
-  this->p = this->n = nullptr;
+  p = n = nullptr;
 }
