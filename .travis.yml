@@ -11,5 +11,5 @@ install:
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
 
 script:
-  - g++ *.cc -std=c++17 -o main
+  - g++ src/*.cc -std=c++17 -o main
   - ./main src.txt input.txt output.txt

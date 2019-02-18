@@ -1,12 +1,12 @@
 #include "main.h"
-#include "list.h"
+#include "array.h"
 
 extern u8 INT_SIZE;
 extern u8 INT_MASK;
 extern u8 HIGHEST_BIT;
 
 class Address{
-  List *arr;
+  Array *arr;
   u8 index = 0;
   u8 mask = 1;
 

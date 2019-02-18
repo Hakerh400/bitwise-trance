@@ -1,14 +1,14 @@
 #include "main.h"
 #include "elem.h"
 
-class List{
+class Array{
   Elem *head = nullptr;
   Elem *tail = nullptr;
   u8 len = 0;
 
 public:
-  List();
-  ~List();
+  Array();
+  ~Array();
 
   void push(u8 v);
   void unshift(u8 v);

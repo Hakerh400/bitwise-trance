@@ -1,12 +1,12 @@
-#include "list.h"
+#include "array.h"
 
-List::List(){}
+Array::Array(){}
 
-List::~List(){
+Array::~Array(){
   while(head) pop();
 }
 
-void List::push(u8 v){
+void Array::push(u8 v){
   if(!head){
     head = tail = new Elem(v);
   }else{
@@ -17,7 +17,7 @@ void List::push(u8 v){
   len++;
 }
 
-void List::unshift(u8 v){
+void Array::unshift(u8 v){
   if(!head){
     head = tail = new Elem(v);
   }else{
@@ -28,7 +28,7 @@ void List::unshift(u8 v){
   len++;
 }
 
-u8 List::pop(){
+u8 Array::pop(){
   u8 v = tail->v;
   
   if(head == tail){
@@ -44,7 +44,7 @@ u8 List::pop(){
   return v;
 }
 
-u8 List::shift(){
+u8 Array::shift(){
   u8 v = head->v;
 
   if(head == tail){
@@ -60,11 +60,11 @@ u8 List::shift(){
   return v;
 }
 
-u8 List::getLen(){
+u8 Array::getLen(){
   return len;
 }
 
-void List::setLen(u8 len){
+void Array::setLen(u8 len){
   while(this->len != len)
     this->pop();
 }
