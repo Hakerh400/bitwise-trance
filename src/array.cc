@@ -6,6 +6,18 @@ Array::~Array(){
   while(head) pop();
 }
 
+Array *Array::slice(){
+  Array *arr = new Array();
+  Elem *e = head;
+
+  while(e){
+    arr->push(e->v);
+    e = e->n;
+  }
+
+  return arr;
+}
+
 void Array::push(u8 v){
   if(!head){
     head = tail = new Elem(v);
@@ -58,6 +70,22 @@ u8 Array::shift(){
 
   len--;
   return v;
+}
+
+u8 &Array::first(){
+  return head->v;
+}
+
+u8 &Array::last(){
+  return tail->v;
+}
+
+Elem *Array::getHead(){
+  return head;
+}
+
+Elem *Array::getTail(){
+  return tail;
 }
 
 u8 Array::getLen(){

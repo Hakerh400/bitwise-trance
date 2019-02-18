@@ -4,10 +4,18 @@
 #include "buffer.h"
 #include "parser.h"
 #include "engine.h"
+#include "address.h"
+#include "array.h"
+#include "elem.h"
 
 namespace Main{
   int main(u8 argc, const char **argv){
-    if(sizeof(void*) != 8)
+    Address *a = new Address(5);
+    a->shl(3);
+    L(a->valueOf());
+    delete a;
+
+    /*if(sizeof(void*) != 8)
       return err("Expected 64-bit address space");
 
     if(argc != 4)
@@ -34,7 +42,7 @@ namespace Main{
       return err("Out of memory");
     
     FS::writeFile(outputFile, output);
-    delete output;
+    delete output;*/
 
     return 0;
   }
