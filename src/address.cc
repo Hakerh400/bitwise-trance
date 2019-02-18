@@ -21,7 +21,7 @@ u8 Address::intSize(){
 
 Address *Address::from(Address *addr){
   //return (new Address())->from(addr);
-  return reinterpret_cast<Address*>(nullptr);
+  return reinterpret_cast<Address*>((u8)0);
 }
 
 Address *Address::oldOrNew(Address *addr, bool createNew){
