@@ -11,4 +11,4 @@ if not "%initialized%" == "1" (
   set initialized=1
 )
 
-call cl /nologo /EHsc /Fe"main.exe" *.cc
+call cl /nologo /EHsc /Fe"main.exe" src/*.cc
