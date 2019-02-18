@@ -11,7 +11,7 @@
 namespace Main{
   int main(u8 argc, const char **argv){
     Address *a = new Address(5);
-    a->shl(3);
+    a->shl(30);
     L(a->valueOf());
     delete a;
 
