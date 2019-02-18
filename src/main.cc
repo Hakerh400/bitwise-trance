@@ -10,15 +10,15 @@
 
 namespace Main{
   int main(u8 argc, const char **argv){
+    if(sizeof(void*) != 8)
+      return err("Expected 64-bit address space");
+
     Address *a = new Address(5);
     a->shl(30);
     L(a->valueOf());
     delete a;
 
-    /*if(sizeof(void*) != 8)
-      return err("Expected 64-bit address space");
-
-    if(argc != 4)
+    /*if(argc != 4)
       return err("Expected 3 argument: source_file input_file output_file");
 
     const char *srcFile = argv[1];
