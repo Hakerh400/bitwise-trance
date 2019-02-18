@@ -12,4 +12,4 @@ install:
 
 script:
   - g++ src/*.cc -std=c++17 -o main
-  - ./main src.txt input.txt output.txt
+  - ./main test/src.txt test/input.txt test/output.txt

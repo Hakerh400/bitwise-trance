@@ -1,4 +1,4 @@
 @echo off
 cls
 
-call main.exe src.txt input.txt output.txt
+call main.exe test/src.txt test/input.txt test/output.txt

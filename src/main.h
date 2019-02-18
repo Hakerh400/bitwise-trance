@@ -3,6 +3,8 @@
 #include <iostream>
 #include <cstdint>
 
+#define L(a) std::cout << a << std::endl;
+
 typedef bool bit;
 
 typedef int8_t i1;

@@ -14,17 +14,20 @@ Buffer::~Buffer(){
 
 Buffer *Buffer::allocUnsafe(u8 len){
   u1 *data = new (std::nothrow) u1[len];
+  if(!data) return nullptr;
   return new Buffer(data, len);
 }
 
 Buffer *Buffer::alloc(u8 len){
   Buffer *buf = allocUnsafe(len);
+  if(!buf) return nullptr;
   buf->fill(0);
   return buf;
 }
 
 Buffer *Buffer::from(u1 *data, u8 len){
   Buffer *buf = allocUnsafe(len);
+  if(!buf) return nullptr;
   copyData(data, buf->data, len);
   return buf;
 }
@@ -35,6 +38,7 @@ Buffer *Buffer::from(Buffer *buf){
 
 Buffer *Buffer::concat(Buffer *buf1, Buffer *buf2){
   Buffer *buf = Buffer::allocUnsafe(buf1->len + buf2->len);
+  if(!buf) return nullptr;
   buf1->copy(buf);
   buf2->copy(buf, buf1->len);
   return buf;
